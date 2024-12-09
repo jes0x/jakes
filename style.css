@@ -1,0 +1,419 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    min-height: 100%;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #191F70;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    height: 100%; 
+    min-height: 100vh;
+    margin-bottom: 20px;
+    position:relative;
+    bottom:0;
+  }
+
+  #halolo{
+    min-height: 165vh;
+  }
+  #halolo2{
+    min-height: 180vh;
+  }
+  
+  #halolo3{
+    min-height: 115vh;
+  }
+
+  .logo {
+    width: 60%;
+    margin-left: 50px;
+  }
+
+  .sidebar h4 {
+    margin-top: 0px; 
+    color:lightgreen;
+    margin-bottom: 50px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .sidebar ul li {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none; /* Hilangkan underline */
+    color: white; /* Ubah warna teks menjadi putih */
+  }
+
+  .sidebar ul li:hover {
+    background-color: #31398D;
+    cursor: pointer;
+  }
+  
+  .sidebar .highlight {
+    font-weight: bold;
+    text-shadow: 0 0 10px #0b74da, 0 0 20px #0b74da, 0 0 30px #0b74da; 
+}
+
+.sidebar-button {
+  background-color:#006400; /* Warna tombol */
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px; /* Dorong tombol ke bawah */
+  text-align: left;
+  cursor: pointer;
+  border-radius: 15px;
+  width: auto;
+  font-weight: bold; /* Membuat teks bold */
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.sidebar-button:hover {
+  background-color: lightgreen; /* Warna saat tombol di-hover */
+}
+
+  .main-content {
+    flex: 1;
+    padding: 10px 20px;
+    color: #000;
+  }
+  
+  .dashboard {
+    background-color: #004D33;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .map-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; 
+    margin-top:10px;
+    padding-top: 20px;
+  }
+  
+  
+  .map-section .map {
+    width: calc(30% * 3 + 50px);
+    border-radius: 10px;
+    margin-top: 100;
+    margin-left: 21px;
+  }
+  
+  .charts {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px; 
+  }
+  
+  .chart {
+    width: 30%;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 10px; 
+    margin-bottom: 20px;
+ }
+  
+  .chart:first-child {
+    margin-left: 10000; 
+  }
+  
+  .chart:last-child {
+    margin-right: 10000; 
+  }
+  
+  .chart img {
+    width: 100%;
+    border-radius: 10px;
+}
+  
+/* ALL */
+/* Wrapper untuk Sidebar dan Konten */
+.wrapper {
+  display: flex; /* Layout horizontal */
+  height: 100vh; /* Panjang penuh layar */
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 250px;
+  background-color: #002e5a; /* Warna biru tua */
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#sidebar .logo img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar ul li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+#sidebar ul li:hover {
+  text-shadow: 0 0 5px #ffffff;
+}
+
+/* Konten Utama */
+.content-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Judul Konten */
+.content-container h1 {
+  text-align: center;
+  color: #31398D; /* Warna biru */
+  margin-top: 0;
+}
+
+/* Kotak Hijau Tua */
+/* Kotak Hijau */
+.content-box {
+  background-color: #006400; /* Hijau tua */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px; /* Margin 10px untuk membuat jarak di sekitar kotak */
+  position: relative; /* Membuat posisi untuk kotak putih menimpa */
+  box-sizing: border-box;
+  min-height: 100px; /* Tambahkan minimal tinggi agar tetap terlihat jika konten sedikit */
+  height: auto;
+}
+
+/* Kotak Putih */
+.inner-box {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: static; /* Agar kotak putih menimpa kotak hijau */
+  top: 20px; /* Posisi kotak putih 20px dari atas kotak hijau */
+  left: 20px; /* Posisi kotak putih 20px dari kiri kotak hijau */
+  right: 20px; /* Posisi kotak putih 20px dari kanan kotak hijau */
+  padding-bottom: 20px; /* Ruang bawah untuk memastikan tidak terlalu rapat */
+  box-sizing: border-box;
+}
+
+.content-box0 {
+  background-color: #006400; /* Hijau tua */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px; /* Margin 10px untuk membuat jarak di sekitar kotak */
+  position: relative; /* Membuat posisi untuk kotak putih menimpa */
+  box-sizing: border-box;
+  height: 480px;
+}
+
+/* Kotak Putih */
+.inner-box0 {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Agar kotak putih menimpa kotak hijau */
+  top: 20px; /* Posisi kotak putih 10px dari atas kotak hijau */
+  left: 20px; /* Posisi kotak putih 10px dari kiri kotak hijau */
+  right: 20px; /* Posisi kotak putih 10px dari kanan kotak hijau */
+  bottom: 20px; /* Posisi kotak putih 10px dari bawah kotak hijau */
+}
+
+.buttonNB {
+  background-color: #006400; /* Warna tombol */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold; /* Membuat teks bold */
+  font-size: 15px;
+  position: absolute; /* Position the button at the bottom right */
+  bottom: 20px; /* 10px from the bottom */
+  right: 20px; /* 10px from the right */
+}
+
+.buttonBack {
+  background-color: #ff6347; /* Warna tombol Back (misalnya merah muda) */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute; /* Position the button at the bottom left */
+  bottom: 20px; /* 10px from the bottom */
+  right: 120px; /* 10px from the left */
+}
+
+.buttonNB:hover, .buttonBack:hover , button3:hover{
+  background-color: lightgreen; /* Warna saat tombol di-hover */
+}
+
+.button3 {
+  background-color: #ff6347; /* Warna tombol Back (misalnya merah muda) */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute; /* Position the button at the bottom left */
+  top: 40px; /* 10px from the bottom */
+  left: 45px; /* 10px from the left */
+}
+
+/* PETA */
+/* PETA */
+.map-container {
+  position: relative;
+  width: 800px; /* Set the map's width */
+  height: 500px; /* Set the map's height */
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflowing elements */
+}
+
+.map-image {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Interactive hover effect */
+}
+
+.map-image:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Positioning each region */
+.sumatra img{
+  max-width: 200px;
+  margin-top: 70px;
+  margin-left: 10px;
+}
+
+.kalimantan img{
+  position: relative;
+  max-width: 170px;
+  top: 60px;
+  left: 200px;
+}
+
+.sulawesi img{
+  position: relative;
+  max-width: 170px;
+  left: 400px;
+  top: 80px;
+}
+
+.jawa img{
+  position: relative;
+  max-width: 400px;
+  left: 200px;
+  top: 260px;
+}
+
+.papua img{
+  position: relative;
+  max-width: 200px;
+  left: 570px;
+  top: 90px;
+}
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAA */
+/* Main Content */
+.main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h1 {
+  margin: 0;
+  color: #002060;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 20px;
+}
+
+/* Map Section */
+.map-container2 {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-image2 {
+  max-width: 80%;
+  height: auto;
+}
+
+
+
+/* Charts Section */
+.charts2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.chart img {
+  max-width: 80%;
+  height: auto;
+}
+
