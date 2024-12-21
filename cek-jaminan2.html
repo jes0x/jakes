@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaminan Kesehatan Daerah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+        <h4>Jaminan Kesehatan</h4>
+        <ul>
+            <li><a href="jakes1.html"><b>BPJS Penerima PBI</b></a></li>
+            <li><a href="jakes2.html"><b>BPJS Non-Penerima PBI</b></a></li>
+            <li><a href="jakes3.html"><b>Jamkesda</b></a></li>
+            <li><a href="jakes4.html"><b>Asuransi Swasta</b></a></li>
+            <li><a href="jakes5.html"><b>Asuransi Perusahaan</b></a></li>
+            <li><a href="cek-jaminan.html" class="highlight">Cek Jaminan Kesehatan</a></li>
+          </ul>
+        <a href="index.html">
+            <button class="sidebar-button">Kembali</button>
+          </a>
+        </div>
+
+      <div class="content-container">
+        <h1>Cek Jaminan Kesehatan</h1>
+        <form id="healthForm" onsubmit="submitForm(event)">
+        <div class="content-box0">
+          <div class="inner-box0">
+            <!-- Form Langsung Ditampilkan -->
+            <h2 style="color:#31398D">Yuk, cari tahu jenis jaminan kesehatan yang paling cocok untuk kamu</h2>
+            <form id="healthForm" onsubmit="submitForm(event)">
+              <!-- Premi -->
+              <p>Premi yang Dapat Dikeluarkan:</p>
+              <label><input type="radio" name="premium" value="<50"> Kurang dari Rp50.000</label>
+              <label><input type="radio" name="premium" value="50-100"> Rp50.000 - Rp100.000</label>
+              <label><input type="radio" name="premium" value=">100"> Lebih dari Rp100.000</label>
+
+              <!-- Keinginan Fasilitas -->
+              <p>Keinginan Fasilitas Kesehatan:</p>
+              <label><input type="radio" name="facilities" value="yes"> Ya</label>
+              <label><input type="radio" name="facilities" value="no"> Tidak</label>
+
+              <!-- layanan kesehatan tambahan -->
+              <p>Apakah Anda membutuhkan layanan kesehatan tambahan seperti rawat jalan, gigi, atau mata?</p>
+              <label><input type="radio" name="additionalServices" value="yes"> Ya</label>
+              <label><input type="radio" name="additionalServices" value="no"> Tidak</label>
+              <br>
+              <a href="cek-jaminan.html">
+                <button type="button" class="buttonBack">Kembali</button>
+              </a>
+              
+              <form id="healthForm" onsubmit="submitForm(event)">
+                <button type="submit" class="buttonNB">Kirim</button>
+            </form>
+           </form>
+            
+            <div id="recommendation" style="margin-top: 20px;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="script.js"></script>
+</html>

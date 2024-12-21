@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaminan Kesehatan Daerah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+        <h4>Jaminan Kesehatan</h4>
+        <ul>
+            <li><a href="jakes1.html"><b>BPJS Penerima PBI</b></a></li>
+            <li><a href="jakes2.html"><b>BPJS Non-Penerima PBI</b></a></li>
+            <li><a href="jakes3.html"><b>Jamkesda</b></a></li>
+            <li><a href="jakes4.html"><b>Asuransi Swasta</b></a></li>
+            <li><a href="jakes5.html"><b>Asuransi Perusahaan</b></a></li>
+            <li><a href="cek-jaminan.html" class="highlight">Cek Jaminan Kesehatan</a></li>
+          </ul>
+        <a href="index.html">
+            <button class="sidebar-button">Kembali</button>
+          </a>
+        </div>
+
+      <div class="content-container">
+        <h1>Cek Jaminan Kesehatan</h1>
+        <div class="content-box0">
+          <div class="inner-box0">
+            <!-- Form Langsung Ditampilkan -->
+            <h2 style="color:#31398D">Yuk, cari tahu jenis jaminan kesehatan yang paling cocok untuk kamu</h2>
+            <form id="healthForm" onsubmit="submitForm(event)">
+                <!-- Kondisi Kesehatan -->
+              <p>Apakah Anda memiliki kondisi kesehatan tertentu yang memerlukan perawatan rutin?</p>
+              <label><input type="radio" name="healthCondition" value="yes"> Ya</label>
+              <label><input type="radio" name="healthCondition" value="no"> Tidak</label>
+                <br>
+              <!-- Pekerjaan -->
+              <p>Apakah Anda bekerja di sektor formal atau informal?</p>
+              <label><input type="radio" name="occupation" value="formal"> Formal</label>
+              <label><input type="radio" name="occupation" value="informal"> Informal</label>
+                <br>
+              <!-- Anggota Keluarga -->
+              <p>Apakah Anda memerlukan jaminan kesehatan untuk anggota keluarga?</p>
+              <label><input type="radio" name="family" value="yes"> Ya</label>
+              <label><input type="radio" name="family" value="no"> Tidak</label>
+                <br>
+              <!-- Pendapatan -->
+              <p>Berapa kisaran pendapatan bulanan Anda?</p>
+              <label><input type="radio" name="income" value="<2"> Kurang dari Rp2.000.000</label>
+              <label><input type="radio" name="income" value="2-5"> Rp2.000.000 - Rp5.000.000</label>
+              <label><input type="radio" name="income" value=">5"> Lebih dari Rp5.000.000</label>
+                <br>
+              <!-- Tombol Next -->
+              <a href="cek-jaminan2.html">
+                <button type="button" class="buttonNB">Selanjutnya</button>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="script.js"></script>
+</html>
